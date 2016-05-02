@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/extension.css" />
+  </head>
+  
+  <body tabindex="1"> <!-- the tabIndex here is to stop chrome's nasty habit of focusing the first link in the popup' --> 
+    
+    <header></header>
+    
+    <!-- Loading image/message as placeholder, will be hidden when the stories are loaded -->
+    <div id="loading">
+      <img src="images/loading.gif">
+      <p>
+        Carregando notícias...
+      </p>
+    </div>
+    
+    <!-- If anything goes wrong, this is shown -->
+    <div id="error">
+        <img src="images/error.png">
+        <p>
+          Houve um erro ao obter as notícias.
+        </p>
+    </div>
+    
+    
+    <section id="headlines">
+        
+    </section>
+    
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/extension.js"></script>
+  </body>
+</html>

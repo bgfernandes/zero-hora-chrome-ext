@@ -1,0 +1,14 @@
+{
+  "name": "zerohoraext",
+  "version": "0.0.1",
+  "description": "A Google Chrome Extension that shows Zero Hora's main headlines.",
+  "main": "index.js",
+  "author": "Bruno Gabriel Fernandes",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.0.5",
+    "gulp-shell": "^0.5.2",
+    "watchify": "^3.7.0"
+  }
+}

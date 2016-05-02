@@ -1,0 +1,118 @@
+//author: Bruno Gabriel Fernandes
+
+@headerBackgroundColor: #32bbef;
+
+@popupWidth: 400px;
+
+@greyTextColor: #333;
+@blueTextColor: #02aceb;
+
+body {
+  font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+  font-size: 100%;
+  width: @popupWidth;
+  margin: 0;
+}
+
+header {
+  background-color: @headerBackgroundColor;
+  background-image: url("../images/icon128.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 65px 65px;
+  height: 55px;
+}
+
+.loadingAndErrorImages {
+  img {
+    margin: 30px 0 0 0;
+    width: 24px;
+    height: 24px;
+    }
+}
+
+.loadingAndErrorParagraphs {
+  p {
+    font-family: Lato;
+    font-weight: 400;
+    color: @greyTextColor;
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+}
+
+div#error {
+  display: none;
+  text-align: center;
+  .loadingAndErrorImages;
+  .loadingAndErrorParagraphs;
+}
+
+div#loading {
+  text-align: center;
+  .loadingAndErrorImages;
+  .loadingAndErrorParagraphs;
+}
+
+.headline {
+  padding: 10px 10px 0 10px;
+  white-space: no-break;
+  position: relative;
+  min-height: 80px;
+  
+  .left-column {
+    display: inline-block;
+      
+    img {
+      width: 160px;
+      height: 105px;
+      object-fit: cover;
+    }
+  }
+  
+  .right-column {
+    display: inline-block;
+    width: 200px;
+    margin-left: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  
+    &.no-image {
+      width: 380px;
+      margin-left: 0;
+    }
+    
+    .title {
+      display: block;
+      text-decoration: none;
+      color: @blueTextColor;
+      font-family: Lato;
+      font-weight: 700;
+      font-size: 15px;
+      
+      &:hover{
+        text-decoration: underline;  
+      }  
+    }
+    
+    .description {
+      display: inline-block;
+      text-decoration: none;
+      color: @greyTextColor;
+      font-family: Montserrat;
+      font-weight: 700;
+      font-size: 18px;
+      
+      &:hover{
+        transition:color 500ms ease;
+        color: @blueTextColor;
+      }
+      
+      .right-column.no-image & {
+        font-size: 22px;
+      }
+    }
+    
+  }
+}

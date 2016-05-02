@@ -1,0 +1,109 @@
+body {
+  font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+  font-size: 100%;
+  width: 400px;
+  margin: 0;
+}
+header {
+  background-color: #32bbef;
+  background-image: url("../images/icon128.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 65px 65px;
+  height: 55px;
+}
+.loadingAndErrorImages img {
+  margin: 30px 0 0 0;
+  width: 24px;
+  height: 24px;
+}
+.loadingAndErrorParagraphs p {
+  font-family: Lato;
+  font-weight: 400;
+  color: #333;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+div#error {
+  display: none;
+  text-align: center;
+}
+div#error img {
+  margin: 30px 0 0 0;
+  width: 24px;
+  height: 24px;
+}
+div#error p {
+  font-family: Lato;
+  font-weight: 400;
+  color: #333;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+div#loading {
+  text-align: center;
+}
+div#loading img {
+  margin: 30px 0 0 0;
+  width: 24px;
+  height: 24px;
+}
+div#loading p {
+  font-family: Lato;
+  font-weight: 400;
+  color: #333;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+.headline {
+  padding: 10px 10px 0 10px;
+  white-space: no-break;
+  position: relative;
+  min-height: 80px;
+}
+.headline .left-column {
+  display: inline-block;
+}
+.headline .left-column img {
+  width: 160px;
+  height: 105px;
+  object-fit: cover;
+}
+.headline .right-column {
+  display: inline-block;
+  width: 200px;
+  margin-left: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.headline .right-column.no-image {
+  width: 380px;
+  margin-left: 0;
+}
+.headline .right-column .title {
+  display: block;
+  text-decoration: none;
+  color: #02aceb;
+  font-family: Lato;
+  font-weight: 700;
+  font-size: 15px;
+}
+.headline .right-column .title:hover {
+  text-decoration: underline;
+}
+.headline .right-column .description {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 18px;
+}
+.headline .right-column .description:hover {
+  transition: color 500ms ease;
+  color: #02aceb;
+}
+.right-column.no-image .headline .right-column .description {
+  font-size: 22px;
+}
