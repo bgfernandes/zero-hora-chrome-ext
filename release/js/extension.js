@@ -1,8 +1,7 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+"use strict";
 
 var Helper = require('./Helper');
-
-"use strict";
 
 /**
  * Represents a Headline of the newspaper
@@ -14,6 +13,7 @@ var Helper = require('./Helper');
  * @property imgUrl         The link to the story's image (can be null)
  * @property imgTitle       The title of the story's image (can be null)
  * 
+ * @author Bruno Gabriel Fernandes
  */
 class Headline {
     
@@ -108,6 +108,8 @@ module.exports = Headline;
 /**
  * The helper class contains assorted functions
  * @class
+ * 
+ * @author Bruno Gabriel Fernandes
  */
 
 class Helper {
@@ -137,6 +139,8 @@ var Headline = require('./Headline.js');
  * 
  * @property rawContent     The raw HTML string content to be parsed
  * @property content        The jQuery element parsed from the HTML string
+ * 
+ * @author Bruno Gabriel Fernandes
  */
 class Parser {
     
@@ -214,9 +218,17 @@ class Parser {
       //for convenience, turns the container-a into a jquery element
       containerA = $(containerA);
       
-      var headline = new Headline(containerA);
+      var headline = null;
       
-      headlines.push(headline);
+      try {
+        headline = new Headline(containerA);
+      } catch (err) {
+        console.log(err);
+      }
+      
+      if (headline)
+        headlines.push(headline);
+        
     });
     
     return headlines;

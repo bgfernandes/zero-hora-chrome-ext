@@ -1,6 +1,6 @@
 {
   "name": "zerohoraext",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "A Google Chrome Extension that shows Zero Hora's main headlines.",
   "main": "index.js",
   "author": "Bruno Gabriel Fernandes",

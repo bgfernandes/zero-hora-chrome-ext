@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Notícias Zero Hora",
-    "version": "1.0.0",
+    "version": "1.0.1",
     
     "description": "Esta extensão mostra as notícias em destaque da Zero Hora.",
     "icons": { 

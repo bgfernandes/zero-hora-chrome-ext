@@ -87,9 +87,17 @@ class Parser {
       //for convenience, turns the container-a into a jquery element
       containerA = $(containerA);
       
-      var headline = new Headline(containerA);
+      var headline = null;
       
-      headlines.push(headline);
+      try {
+        headline = new Headline(containerA);
+      } catch (err) {
+        console.log(err);
+      }
+      
+      if (headline)
+        headlines.push(headline);
+        
     });
     
     return headlines;
